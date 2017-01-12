@@ -8,7 +8,7 @@ Dictionary app that can work without JavaScript or internet.
 *   [x] Rendering: [`virtual-dom`][vdom]
 *   [x] 100/100 on [Lighthouse][] when ignoring HTTP/2 support, 88/100 otherwise
 *   [x] Shared rendering across server and app
-*   [x] Data [Words API][wordsapi].
+*   [x] Data from [Words API][wordsapi]
 *   [x] Caches Words API responses in [`levelup`][level]
 
 ![screenshot](screenshot.png)
