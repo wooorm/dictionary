@@ -1,0 +1,65 @@
+{
+  "name": "dictionary",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dictionary app that can work without JavaScript or internet",
+  "license": "MIT",
+  "keywords": [
+    "service worker",
+    "offline",
+    "dictionary",
+    "app"
+  ],
+  "repository": "https://github.com/wooorm/dictionary",
+  "bugs": "https://github.com/wooorm/dictionary/issues",
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "dependencies": {
+    "compression": "^1.6.2",
+    "concat-stream": "^1.6.0",
+    "debounce": "^1.0.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "global": "^4.3.1",
+    "leveldown": "^1.5.3",
+    "levelup": "^1.3.3",
+    "pouchdb": "^6.1.1",
+    "vdom-to-html": "^2.3.0",
+    "virtual-dom": "^2.1.1",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "bundle-collapser": "^1.2.1",
+    "esmangle": "^1.0.1",
+    "remark-cli": "^2.1.0",
+    "remark-preset-wooorm": "^1.0.0",
+    "xo": "^0.17.1"
+  },
+  "scripts": {
+    "start": "node server",
+    "build-worker": "browserify -p bundle-collapser/plugin lib/worker | esmangle > public/worker.js",
+    "build-bundle": "browserify -p bundle-collapser/plugin lib/browser | esmangle > public/index.js",
+    "build": "npm run build-worker && npm run build-bundle",
+    "lint-js": "xo",
+    "lint-css": "stylelint public/index.css",
+    "lint-md": "remark . -qfo",
+    "lint": "npm run lint-js && npm run lint-css && npm run lint-md",
+    "test": "npm run build && npm run lint"
+  },
+  "remarkConfig": {
+    "presets": "wooorm"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "xo": {
+    "space": true,
+    "ignore": [
+      "public/worker.js",
+      "public/index.js"
+    ]
+  }
+}

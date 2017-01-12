@@ -1,0 +1,6 @@
+.DS_Store
+.env
+node_modules/
+words-db/
+public/index.js
+public/worker.js

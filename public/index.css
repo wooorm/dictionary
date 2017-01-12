@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  line-height: calc(1em + 1ex);
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  color: rgba(0, 0, 0, 0.97);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Used by WikiPedia for IPAs. */
+.ipa {
+  font-family: Gentium, GentiumAlt, DejaVu Sans, Segoe UI, Lucida Grande, Charis SIL, Doulos SIL, TITUS Cyberbit Basic, Code2000, Lucida Sans Unicode, sans-serif;
+}
+
+body {
+  margin: calc(3em + 3ex) auto;
+  max-width: 50em;
+  padding: 0 calc(1em + 1ex);
+}
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+form {
+  max-width: 100%;
+  display: flex;
+  flex: 0 0 2.75em;
+}
+
+input[type=search],
+button {
+  display: block;
+  font-size: 2em;
+  font-weight: 200;
+  margin: 0;
+  padding: calc(0.25em + 0.25ex) calc(0.5em + 0.5ex);
+  color: rgba(0, 0, 0, 0.97);
+  border-radius: 3px;
+  transition-property: background-color, border-color, box-shadow, opacity;
+  transition-duration: 300ms;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  opacity: 0.75;
+}
+
+input[type=search] {
+  flex-grow: 1;
+  min-width: 0;
+  padding-left: calc(1em + 1ex);
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+}
+
+/* Safari adds some other padding otherwise… */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button {
+  margin-left: calc(0.5em + 0.5ex);
+  border-width: 0;
+  background-color: #d605d6;
+  color: white;
+}
+
+.js button {
+  display: none;
+}
+
+input[type=search]:focus,
+button:focus {
+  border-color: transparent;
+  opacity: initial;
+  outline: initial;
+}
+
+button:focus,
+input[type=search]:focus,
+.dictionary {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+
+input[type=search]:focus,
+.dictionary {
+  background-color: rgba(255, 255, 255, 0.97);
+}
+
+button:focus {
+  background-color: hsla(300, 95%, 43%, 0.5);
+}
+
+.dictionary {
+  margin: calc(1em + 1ex) auto;
+  padding: calc(1em + 1ex) calc(2em + 2ex);
+}
+
+.dictionary-placeholder,
+.dictionary-empty,
+.dictionary-err,
+.dictionary-404 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dictionary-entry,
+.dictionary-definition,
+.dictionary-list-label {
+  font-size: 1em;
+}
+
+.dictionary-definitions,
+.dictionary-list {
+  padding: 0;
+  margin: 0;
+}
+
+.dictionary-definitions {
+  list-style-type: upper-roman;
+}
+
+.dictionary-list {
+  list-style-type: none;
+}
+
+.dictionary-err,
+.dictionary-entry,
+.dictionary-definition,
+.dictionary p,
+.dictionary-list-label {
+  margin-top: calc(0.5em + 0.5ex);
+  margin-bottom: calc(0.5em + 0.5ex);
+}
+
+.dictionary-entry {
+  margin-top: 0;
+}
+
+.dictionary-list-label {
+  margin-bottom: 0;
+}
+
+.dictionary-entry,
+.dictionary-definition,
+.dictionary-list-label,
+.dictionary-pronounciation::before,
+.dictionary-pronounciation::after,
+.dictionary-list li::before,
+footer {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.dictionary-entry,
+.dictionary-definition,
+.dictionary-list-label {
+  font-weight: normal;
+}
+
+.dictionary-list-label,
+abbr {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* Firefox. */
+abbr {
+  text-decoration: none;
+}
+
+.dictionary-entry *,
+.dictionary-definition * {
+  color: initial;
+}
+
+.dictionary-entry strong,
+.dictionary-definition strong {
+  font-weight: bold;
+}
+
+.dictionary-pronounciation::before {
+  content: '| ';
+}
+
+.dictionary-pronounciation::after {
+  content: ' |';
+}
+
+.dictionary-list li::before {
+  content: '○';
+  width: 1em;
+  font-size: 0.625em;
+  line-height: 1;
+  position: relative;
+  top: -0.25em;
+  margin-left: -1.5em;
+  margin-right: 0.6em;
+}
+
+footer {
+  text-align: center;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #d605d6;
+  border-right-color: transparent;
+  border-radius: 100%;
+  margin: 0 auto;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}

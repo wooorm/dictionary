@@ -1,0 +1,32 @@
+{
+  "short_name": "Dictionary",
+  "name": "Dictionary",
+  "start_url": "/",
+  "lang": "en",
+  "theme_color": "#d605d6",
+  "background_color": "#f7f7f7",
+  "display": "standalone",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/static/icon/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icon/256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icon/384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icon/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
