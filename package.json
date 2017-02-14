@@ -31,7 +31,7 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "browserify": "^13.1.1",
+    "browserify": "^14.1.0",
     "bundle-collapser": "^1.2.1",
     "esmangle": "^1.0.1",
     "remark-cli": "^2.1.0",
