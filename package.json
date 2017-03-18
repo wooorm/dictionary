@@ -38,7 +38,7 @@
     "remark-preset-wooorm": "^2.0.0",
     "stylelint": "^7.7.1",
     "stylelint-config-standard": "^16.0.0",
-    "xo": "^0.17.1"
+    "xo": "^0.18.0"
   },
   "scripts": {
     "start": "node server",
@@ -59,6 +59,7 @@
   },
   "xo": {
     "space": true,
+    "esnext": false,
     "ignore": [
       "public/worker.js",
       "public/index.js"
