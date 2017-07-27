@@ -34,10 +34,10 @@
     "browserify": "^14.1.0",
     "bundle-collapser": "^1.2.1",
     "esmangle": "^1.0.1",
-    "remark-cli": "^3.0.0",
-    "remark-preset-wooorm": "^2.0.0",
-    "stylelint": "^7.7.1",
-    "stylelint-config-standard": "^16.0.0",
+    "remark-cli": "^4.0.0",
+    "remark-preset-wooorm": "^3.0.0",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
     "xo": "^0.18.0"
   },
   "scripts": {
