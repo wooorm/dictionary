@@ -4,12 +4,15 @@ var path = require('path');
 var url = require('url');
 var https = require('https');
 var express = require('express');
-var db = require('levelup')('words-db');
+var levelup = require('levelup');
+var leveldown = require('leveldown');
 var concat = require('concat-stream');
 var xtend = require('xtend');
 var compression = require('compression');
 var toString = require('vdom-to-html');
 var render = require('./lib/render');
+
+var db = levelup(leveldown('words-db'));
 
 require('dotenv').config();
 

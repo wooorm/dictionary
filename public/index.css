@@ -130,6 +130,7 @@ button:focus {
 .dictionary-definition,
 .dictionary-list-label {
   font-size: 1em;
+  font-weight: normal;
 }
 
 .dictionary-definitions,
@@ -171,12 +172,6 @@ button:focus {
 .dictionary-list li::before,
 footer {
   color: rgba(0, 0, 0, 0.75);
-}
-
-.dictionary-entry,
-.dictionary-definition,
-.dictionary-list-label {
-  font-weight: normal;
 }
 
 .dictionary-list-label,
