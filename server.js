@@ -1,13 +1,11 @@
 'use strict';
 
 var path = require('path');
-var url = require('url');
 var https = require('https');
 var express = require('express');
 var levelup = require('levelup');
 var leveldown = require('leveldown');
 var concat = require('concat-stream');
-var xtend = require('xtend');
 var compression = require('compression');
 var toString = require('vdom-to-html');
 var render = require('./lib/render');
@@ -22,8 +20,8 @@ if (!key) {
   throw new Error('Missing `WORDSAPI_KEY` in env.');
 }
 
-var endpoint = 'https://wordsapiv1.p.mashape.com';
-var headers = {Accept: 'application/json', 'X-Mashape-Key': key};
+var endpoint = 'https://wordsapiv1.p.rapidapi.com';
+var headers = {Accept: 'application/json', 'X-RapidAPI-Key': key};
 
 express()
   .use(compression())
@@ -107,7 +105,7 @@ function load(value, callback) {
       callback(null, buf);
     } else {
       console.log('Could not find `%s` in database', word);
-      https.get(xtend(url.parse(endpoint + '/words/' + word), {headers: headers}), onresponse);
+      https.get(endpoint + '/words/' + word, {headers: headers}, onresponse);
     }
   }
 

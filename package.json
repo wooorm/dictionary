@@ -18,27 +18,26 @@
   ],
   "dependencies": {
     "compression": "^1.6.2",
-    "concat-stream": "^1.6.0",
+    "concat-stream": "^2.0.0",
     "debounce": "^1.0.0",
-    "dotenv": "^5.0.0",
+    "dotenv": "^8.0.0",
     "express": "^4.14.0",
     "global": "^4.3.1",
-    "leveldown": "^3.0.0",
-    "levelup": "^2.0.2",
-    "pouchdb": "^6.1.1",
+    "leveldown": "^5.0.0",
+    "levelup": "^4.0.0",
+    "pouchdb": "^7.0.0",
     "vdom-to-html": "^2.3.0",
-    "virtual-dom": "^2.1.1",
-    "xtend": "^4.0.1"
+    "virtual-dom": "^2.1.1"
   },
   "devDependencies": {
     "browserify": "^16.0.0",
     "bundle-collapser": "^1.2.1",
     "esmangle": "^1.0.1",
-    "remark-cli": "^5.0.0",
+    "remark-cli": "^6.0.0",
     "remark-preset-wooorm": "^4.0.0",
-    "stylelint": "^9.0.0",
+    "stylelint": "^10.0.0",
     "stylelint-config-standard": "^18.0.0",
-    "xo": "^0.20.0"
+    "xo": "^0.24.0"
   },
   "scripts": {
     "start": "node server",
