@@ -57,7 +57,7 @@ Lastly, run `npm start` to start the server on port `2000`.
 
 ## License
 
-MIT © Titus Wormer
+[MIT][] © Titus Wormer
 
 [env]: https://github.com/motdotla/dotenv
 
@@ -72,3 +72,5 @@ MIT © Titus Wormer
 [pouch]: https://github.com/pouchdb/pouchdb
 
 [level]: https://github.com/level/levelup
+
+[mit]: license
