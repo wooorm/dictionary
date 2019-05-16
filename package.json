@@ -33,6 +33,7 @@
     "browserify": "^16.0.0",
     "bundle-collapser": "^1.2.1",
     "esmangle": "^1.0.1",
+    "prettier": "^1.17.1",
     "remark-cli": "^6.0.0",
     "remark-preset-wooorm": "^4.0.0",
     "stylelint": "^10.0.0",
@@ -41,23 +42,33 @@
   },
   "scripts": {
     "start": "node server",
+    "format-md": "remark . -qfo",
+    "format-js": "prettier --write \"**/*.js\" && xo --fix",
+    "format-css": "stylelint public/index.css --fix",
+    "format": "npm run format-md && npm run format-js && npm run format-css",
     "build-worker": "browserify -p bundle-collapser/plugin lib/worker | esmangle > public/worker.js",
     "build-bundle": "browserify -p bundle-collapser/plugin lib/browser | esmangle > public/index.js",
     "build": "npm run build-worker && npm run build-bundle",
-    "lint-js": "xo",
-    "lint-css": "stylelint public/index.css",
-    "lint-md": "remark . -qfo",
-    "lint": "npm run lint-js && npm run lint-css && npm run lint-md",
-    "test": "npm run build && npm run lint"
+    "test": "npm run build && npm run format"
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
+  },
   "xo": {
-    "space": true,
+    "prettier": true,
     "esnext": false,
     "ignore": [
       "public/worker.js",
