@@ -57,7 +57,7 @@ Lastly, run `npm start` to start the server on port `2000`.
 
 ## License
 
-[MIT][] © Titus Wormer
+[MIT][] © [Titus Wormer][author]
 
 [env]: https://github.com/motdotla/dotenv
 
@@ -74,3 +74,5 @@ Lastly, run `npm start` to start the server on port `2000`.
 [level]: https://github.com/level/levelup
 
 [mit]: license
+
+[author]: https://wooorm.com
