@@ -89,7 +89,7 @@ function respond(res, err, data) {
     '<script>document.body.className = \'js\';</script>',
     doc,
     '<footer>',
-    '<p><a href="https://github.com/wooorm/dictionary/blob/master/license"><abbr title="Massachusetts Institute of Technology (license)">MIT</abbr></a> © <a href="http://wooorm.com">wooorm</a>',
+    '<p><a href="https://github.com/wooorm/dictionary/blob/master/license"><abbr title="Massachusetts Institute of Technology (license)">MIT</abbr></a> © <a href="https://wooorm.com">wooorm</a>',
     '</footer>',
     '<script type="text/json">' + source + '</script>',
     '<script src="/static/index.js"></script>',
