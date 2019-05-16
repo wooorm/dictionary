@@ -4,3 +4,4 @@ node_modules/
 words-db/
 public/index.js
 public/worker.js
+yarn.lock
