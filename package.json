@@ -31,13 +31,12 @@
   },
   "devDependencies": {
     "browserify": "^16.0.0",
-    "bundle-collapser": "^1.2.1",
-    "esmangle": "^1.0.1",
     "prettier": "^1.17.1",
     "remark-cli": "^6.0.0",
     "remark-preset-wooorm": "^4.0.0",
     "stylelint": "^10.0.0",
     "stylelint-config-standard": "^18.0.0",
+    "tinyify": "^2.5.0",
     "xo": "^0.24.0"
   },
   "scripts": {
@@ -46,8 +45,8 @@
     "format-js": "prettier --write \"**/*.js\" && xo --fix",
     "format-css": "stylelint public/index.css --fix",
     "format": "npm run format-md && npm run format-js && npm run format-css",
-    "build-worker": "browserify -p bundle-collapser/plugin lib/worker | esmangle > public/worker.js",
-    "build-bundle": "browserify -p bundle-collapser/plugin lib/browser | esmangle > public/index.js",
+    "build-worker": "browserify lib/worker -p tinyify -o public/worker.js",
+    "build-bundle": "browserify lib/browser -p tinyify -o public/index.js",
     "build": "npm run build-worker && npm run build-bundle",
     "test": "npm run build && npm run format"
   },
